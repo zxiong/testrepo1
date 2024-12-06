@@ -196,7 +196,9 @@ spec:
       - name: COMMIT_SHA
         value: $(tasks.clone-repository.results.commit)
       - name: STORAGE_DRIVER 
-        value: overlay2
+        value: overlay
+      - name: ADD_CAPABILITIES
+        value: SYS_ADMIN,MKNOD,SYS_CHROOT,SETFCAP,SYS_RESOURCE,SETUID,SETGID
       runAfter:
       - prefetch-dependencies
       taskRef:
