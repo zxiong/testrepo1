@@ -19,7 +19,7 @@ metadata:
 spec:
   params:
   - name: dockerfile
-    value: Dockerfile
+    value: Dockerfile.10m10
   - name: git-url
     value: '{{source_url}}'
   - name: output-image
@@ -197,8 +197,6 @@ spec:
         value: $(tasks.clone-repository.results.commit)
       - name: STORAGE_DRIVER 
         value: overlay
-      - name: ADD_CAPABILITIES
-        value: SYS_ADMIN,SYS_CHROOT,SETFCAP,SETUID,SETGID
       runAfter:
       - prefetch-dependencies
       taskRef:
@@ -206,7 +204,7 @@ spec:
         - name: name
           value: buildah
         - name: bundle
-          value: quay.io/redhat-appstudio-tekton-catalog/task-buildah:0.2@sha256:808be6da05864bf123a3cdaaab72701d08b27032804ed8df65e86ca0949e417c
+          value: quay.io/zxiong/task-buildah@sha256:00d9dff50571c9dfae0400c0dd1a3a445f7bc3ca1555cace5d9e4c39fb50bede
         - name: kind
           value: task
         resolver: bundles
