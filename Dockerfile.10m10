@@ -1,0 +1,14 @@
+FROM registry.access.redhat.com/ubi9/python-311
+
+RUN dd if=/dev/urandom of=./$(date -Ins) bs=16384 count=640
+RUN dd if=/dev/urandom of=./$(date -Ins) bs=16384 count=640
+RUN dd if=/dev/urandom of=./$(date -Ins) bs=16384 count=640
+RUN dd if=/dev/urandom of=./$(date -Ins) bs=16384 count=640
+RUN dd if=/dev/urandom of=./$(date -Ins) bs=16384 count=640
+RUN dd if=/dev/urandom of=./$(date -Ins) bs=16384 count=640
+RUN dd if=/dev/urandom of=./$(date -Ins) bs=16384 count=640
+RUN dd if=/dev/urandom of=./$(date -Ins) bs=16384 count=640
+RUN dd if=/dev/urandom of=./$(date -Ins) bs=16384 count=640
+RUN dd if=/dev/urandom of=./$(date -Ins) bs=16384 count=640
+
+USER 1001
