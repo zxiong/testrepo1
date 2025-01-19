@@ -162,7 +162,7 @@ spec:
         - name: name
           value: git-clone-oci-ta
         - name: bundle
-          value: quay.io/zxiong/task-git-clone-oci-ta:0.1
+          value: quay.io/zxiong/task-git-clone-oci-ta:0.2
         - name: kind
           value: task
         resolver: bundles
